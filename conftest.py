@@ -11,8 +11,7 @@ def browser():
 @pytest.fixture
 def page(browser):
     page = browser.new_page()
-    
-    page.goto("https://jqueryui.com")
+
     yield page
     
     page.close()
