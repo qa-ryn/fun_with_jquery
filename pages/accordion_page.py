@@ -72,12 +72,7 @@ class AccordionPage:
         print("\n")
         iframe = self._get_iframe()
         for section_name, section_locator, expected_text in self.sections:
-            iframe.get_by_role("tab", name=section_name).click()
-            self.page.wait_for_timeout(1000)
-            panel = iframe.locator(section_locator)
-            self._validate_panel(panel, expected_text)
-            if section_name == "Section 3":
-                self._print_section_list_items(iframe)
+            self._handle_section(iframe, section_name, section_locator, expected_text)
 
     def collapse_content(self):
         """Test accordion collapse/expand behavior and validate panel behavior."""
