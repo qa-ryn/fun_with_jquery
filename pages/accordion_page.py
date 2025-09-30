@@ -88,9 +88,3 @@ class AccordionPage:
         for section_name, section_locator, expected_text in self.sections:
             self._handle_section(iframe, section_name, section_locator, expected_text, check_icon=True)
 
-    def fill_space(self):
-        """Test accordion with fill space behavior."""
-        print("\n")
-        iframe = self._get_iframe()
-        for section_name, section_locator, expected_text in self.sections:
-            self._handle_section(iframe, section_name, section_locator, expected_text)

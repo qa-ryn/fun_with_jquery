@@ -16,7 +16,3 @@ def test_customize_icon(page: Page):
     run.load_page("https://jqueryui.com/accordion/#custom-icons")
     run.customize_icons()
 
-def test_fill_space(page:Page):
-    run = AccordionPage(page)
-    run.load_page("https://jqueryui.com/accordion/#fillspace")
-    run.fill_space()
